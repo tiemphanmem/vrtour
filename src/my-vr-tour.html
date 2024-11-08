@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VR Tour - Fpoly Cần Thơ</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link type="text/css" rel="Stylesheet" href="css/pannellum.css" />
+  <script type="text/javascript" src="js/libpannellum.js"></script>
+  <script type="text/javascript" src="js/pannellum.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"
+    crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  <link rel="stylesheet" src="my-vr-tour.css">
+  <script type="text/javascript" src="my-vr-tour.js"></script>
+
+  <style>
+    #panorama {
+      width: 100%;
+      height: 100vh;
+    }
+
+    #controls {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 3px;
+    }
+
+    .ctrl {
+      padding: 8px 5px;
+      width: 30px;
+      text-align: center;
+      background: rgba(200, 200, 200, 0.8);
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .ctrl:hover {
+      background: rgba(200, 200, 200, 1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <iframe width="480" height="390" allowfullscreen style="border-style:none;" src="../src/standalone/pannellum.htm?config=../../examples/my-vr-tour.json"></iframe> -->
+  <div id="panorama">
+    <div id="controls">
+      <div class="ctrl" id="pan-up">&#9650;</div>
+      <div class="ctrl" id="pan-down">&#9660;</div>
+      <div class="ctrl" id="pan-left">&#9664;</div>
+      <div class="ctrl" id="pan-right">&#9654;</div>
+      <div class="ctrl" id="zoom-in">&plus;</div>
+      <div class="ctrl" id="zoom-out">&minus;</div>
+      <div class="ctrl" id="fullscreen">&#x2922;</div>
+    </div>
+  </div>
+
+  <script>
+    viewer = pannellum.viewer("panorama", {
+      default: {
+        author: "Dang Tran",
+        firstScene: "garden",  // Đặt sân vườn là cảnh đầu tiên
+        sceneFadeDuration: 2000,
+        autoLoad: true
+      },
+
+      scenes: {
+        // Sân vườn
+        garden: {
+          title: "Sân vườn - Tây Đô Steel",
+          panorama: "../assets/san-vuon.jpg",
+          yaw: 290,
+          hfov: 200,
+          pitch: -10,
+          hotSpots: [
+            {
+              pitch: -5,
+              yaw: 170,
+              type: "scene",
+              text: "Thăm kho phôi",
+              sceneId: "warehouse",
+            },
+          ],
+        },
+
+        // Kho phôi
+        warehouse: {
+          title: "Kho Phôi",
+          panorama: "../assets/kho-phoi.jpg",
+          hfov: 120,
+          voffset: 50,
+          pitch: -5,
+          yaw: -10,
+          hotSpots: [
+            {
+              pitch: -10,
+              yaw: 10,
+              type: "scene",
+              text: "Thăm sân vườn",
+              sceneId: "garden",
+            },
+          ],
+        },
+      },
+    });
+
+    // Make buttons work
+    document.getElementById("pan-up").addEventListener("click", function (e) {
+      viewer.setPitch(viewer.getPitch() + 10);
+    });
+    document
+      .getElementById("pan-down")
+      .addEventListener("click", function (e) {
+        viewer.setPitch(viewer.getPitch() - 10);
+      });
+    document
+      .getElementById("pan-left")
+      .addEventListener("click", function (e) {
+        viewer.setYaw(viewer.getYaw() - 10);
+      });
+    document
+      .getElementById("pan-right")
+      .addEventListener("click", function (e) {
+        viewer.setYaw(viewer.getYaw() + 10);
+      });
+    document
+      .getElementById("zoom-in")
+      .addEventListener("click", function (e) {
+        viewer.setHfov(viewer.getHfov() - 10);
+      });
+    document
+      .getElementById("zoom-out")
+      .addEventListener("click", function (e) {
+        viewer.setHfov(viewer.getHfov() + 10);
+      });
+    document
+      .getElementById("fullscreen")
+      .addEventListener("click", function (e) {
+        viewer.toggleFullscreen();
+      });
+
+  </script>
+
+
+</body>
+
+</html>
