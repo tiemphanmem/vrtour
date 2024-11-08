@@ -64,14 +64,106 @@
   <script>
     const viewer = pannellum.viewer("panorama", {
       default: {
-        firstScene: "garden",
+        firstScene: "main",
         autoLoad: true,
         author: "Dang Tran",
       },
       scenes: {
+        main: {
+          title: "Sân chính - Tây Đô Steel",
+          panorama: "./assets/main.png",
+          hfov: 110, // Default field of view for larger screens
+          minHfov: 80, // Set minimum and maximum for smaller screens
+          maxHfov: 120,
+          pitch: -10,
+          hotSpots: [{
+            pitch: -6.419552350621027,
+            yaw: -169.70078810534096,
+            type: "scene",
+            text: "Quầy lễ tân",
+            sceneId: "reception",
+          },
+          {
+            pitch: -5.358857289127068,
+            yaw: 100.11053018621715,
+            type: "scene",
+            text: "Thăm sân vườn",
+            sceneId: "garden",
+          }
+          ],
+        },
+        reception: {
+          title: "Quầy lễ tân",
+          panorama: "./assets/le-tan.png",
+          hfov: 110, // Default field of view for larger screens
+          minHfov: 80, // Set minimum and maximum for smaller screens
+          maxHfov: 120,
+          pitch: -10,
+          hotSpots: [
+            {
+              pitch: -5.358857289127068,
+              yaw: 100.11053018621715,
+              type: "scene",
+              text: "Thăm sân vườn",
+              sceneId: "garden",
+            }
+          ],
+        },
         garden: {
           title: "Sân vườn - Tây Đô Steel",
           panorama: "./assets/san-vuon.png",
+          hfov: 110, // Default field of view for larger screens
+          minHfov: 80, // Set minimum and maximum for smaller screens
+          maxHfov: 120,
+          pitch: -10,
+          hotSpots: [{
+            pitch: -8.339623345269096,
+            yaw: 135.59748586018884,
+            type: "scene",
+            text: "Thăm hội trường",
+            sceneId: "hallFront",
+          },
+          {
+            pitch: -5.210206210553617,
+            yaw: 7.77110141894002,
+            type: "scene",
+            text: "Vào nhà mát",
+            sceneId: "gazebo",
+          },
+          {
+            pitch: -2.679228040907118,
+            yaw: 166.86788643731006,
+            type: "scene",
+            text: "Phòng server",
+            sceneId: "server",
+          },
+          {
+            pitch: -8.035659500287561,
+            yaw: -105.98740132649743,
+            type: "scene",
+            text: "Về sân chính",
+            sceneId: "main",
+          }
+          ],
+        },
+        server: {
+          title: "Phòng server",
+          panorama: "./assets/server.png",
+          hfov: 110, // Default field of view for larger screens
+          minHfov: 80, // Set minimum and maximum for smaller screens
+          maxHfov: 120,
+          pitch: -10,
+          hotSpots: [{
+            pitch: -5,
+            yaw: 170,
+            type: "scene",
+            text: "Ra nhà mát",
+            sceneId: "gazebo",
+          }],
+        },
+        gazebo: {
+          title: "Nhà mát",
+          panorama: "./assets/nha-mat.png",
           hfov: 110, // Default field of view for larger screens
           minHfov: 80, // Set minimum and maximum for smaller screens
           maxHfov: 120,
