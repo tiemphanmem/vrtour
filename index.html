@@ -250,13 +250,21 @@
 
     });
 
+    // Kiểm tra nếu là thiết bị di động thì phóng to bằng cách giảm hfov
+    if (window.innerWidth < 768) {
+      viewer.setHfov(50); // Giảm hfov để phóng to hình ảnh
+    }
+
 
     // Make control buttons work
     document.getElementById("pan-up").addEventListener("click", () => viewer.setPitch(viewer.getPitch() + 10));
     document.getElementById("pan-down").addEventListener("click", () => viewer.setPitch(viewer.getPitch() - 10));
     document.getElementById("pan-left").addEventListener("click", () => viewer.setYaw(viewer.getYaw() - 10));
     document.getElementById("pan-right").addEventListener("click", () => viewer.setYaw(viewer.getYaw() + 10));
-    document.getElementById("zoom-in").addEventListener("click", () => viewer.setHfov(viewer.getHfov() - 10));
+    document.getElementById("zoom-in").addEventListener("click", () => {
+      viewer.setHfov(viewer.getHfov() - 10);
+      // alert(viewer.getHfov());
+    });
     document.getElementById("zoom-out").addEventListener("click", () => viewer.setHfov(viewer.getHfov() + 10));
     document.getElementById("fullscreen").addEventListener("click", () => viewer.toggleFullscreen());
 
