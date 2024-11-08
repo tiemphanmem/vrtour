@@ -218,9 +218,13 @@
 
     });
 
+
     // Kiểm tra nếu là thiết bị di động thì phóng to bằng cách giảm hfov
     if (window.innerWidth < 768) {
       viewer.setHfov(60); // Giảm hfov để phóng to hình ảnh
+    }
+    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      viewer.setHfov(50); // Giảm hfov để phóng to hình ảnh
     }
 
 
