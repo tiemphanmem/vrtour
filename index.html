@@ -155,6 +155,14 @@
             type: "scene",
             text: "Về sân chính",
             sceneId: "main",
+          },
+
+          {
+            pitch: -2.97461973344476,
+            yaw: -174.65693261888293,
+            type: "scene",
+            text: "Thăm sân sau",
+            sceneId: "backYard",
           }
           ],
         },
@@ -225,6 +233,52 @@
             text: "Về sân vườn",
             sceneId: "garden",
           }],
+        },
+        backYard: {
+          title: "Sân sau",
+          panorama: "./assets/san-sau.png",
+          hfov: hfovMobile,
+          hotSpots: [{
+            pitch: 3.761571248372396,
+            yaw: 72.49581442938916,
+            type: "scene",
+            text: "Thăm hồ cá Koi",
+            sceneId: "koiPond",
+          },
+          {
+            pitch: 2.3937140570746522,
+            yaw: 32.91364881727429,
+            type: "infor",
+            text: "Phòng họp 3",
+          },
+          {
+            pitch: 3.0776807996961804,
+            yaw: -72.29038900476115,
+            type: "scene",
+            text: "Đến khu Thiên Minh",
+            sceneId: "hallFront",
+          }
+          ],
+        },
+        koiPond: {
+          title: "Sân sau",
+          panorama: "./assets/ho-ca-koi.png",
+          hfov: hfovMobile,
+          hotSpots: [{
+            pitch: 3.901982499847219,
+            yaw: -128.64265700812325,
+            type: "scene",
+            text: "Về sân sau",
+            sceneId: "backYard",
+          },
+          {
+            pitch: 5.4713609483506955,
+            yaw: 161.56440324086594,
+            type: "info",
+            text: "Phòng Tổng Giám đốc",
+            // sceneId: "koiPond",
+          }
+          ],
         },
 
       },
