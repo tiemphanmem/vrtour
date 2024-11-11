@@ -1,10 +1,19 @@
+let isMobile = false;
+// Kiểm tra nếu là thiết bị di động thì phóng to bằng cách giảm hfov
+if (window.innerWidth < 768) {
+  isMobile = true;
+}
+if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+  isMobile = true;
+}
+
 // Hàm để tạo tooltip chứa video
 function addVideoTooltip(hotSpotDiv, args) {
   hotSpotDiv.classList.add("custom-tooltip");
 
   const iframe = document.createElement("iframe");
-  iframe.width = "300";
-  iframe.height = "200";
+  iframe.width = isMobile ? "600" : "300";
+  iframe.height = isMobile ? "400" : "200";
   // iframe.src = `https://www.youtube.com/embed/${args.videoId}`; https://www.youtube.com/embed/mgRCwTPyc2o?si=dGjruFfjfO91XV-c
   iframe.src = `https://www.youtube.com/embed/mgRCwTPyc2o?si=dGjruFfjfO91XV-c`;
   iframe.frameBorder = "0";
@@ -12,6 +21,12 @@ function addVideoTooltip(hotSpotDiv, args) {
   iframe.allowFullscreen = true;
 
   hotSpotDiv.appendChild(iframe);
+
+  if (isMobile) {
+    const customHotspot = document.querySelector('.custom-hotspot');
+    customHotspot.style.width = '500px';
+    customHotspot.style.height = '300px';
+  }
 }
 
 // Hàm tạo tooltip với video ở dạng 3D

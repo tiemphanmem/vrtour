@@ -45,4 +45,9 @@
     padding: 25px;
     /* Tăng khoảng cách trong */
   }
+
+  .custom-hotspot {
+    width: 600px;
+    height: 400px;
+  }
 }
