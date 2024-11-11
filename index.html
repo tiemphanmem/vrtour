@@ -13,7 +13,9 @@
     crossorigin="anonymous"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
   <link rel="stylesheet" src="./src/my-vr-tour.css">
+  <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="./src/my-vr-tour.js"></script>
+  <script src="./js/main.js"></script>
   <style>
     /* Make #panorama full-width and full-height on all devices */
     #panorama {
@@ -94,7 +96,18 @@
             type: "scene",
             text: "Thăm sân vườn",
             sceneId: "garden",
-          }
+          },
+          {
+            pitch: 24.63348397270918,  // điều chỉnh vị trí của hotspot
+            yaw: -166.33427442836072,   // điều chỉnh vị trí của hotspot
+            type: "info",
+            text: "Xem video giới thiệu",
+            cssClass: "custom-hotspot",
+            createTooltipFunc: addVideoTooltip,
+            createTooltipArgs: {
+              videoId: "dGjruFfjfO91XV-c" // Thay bằng ID video YouTube của bạn
+            }
+          },
           ],
         },
         reception: {
