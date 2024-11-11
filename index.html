@@ -62,6 +62,14 @@
   </div>
 
   <script>
+    let hfovMobile = 110;
+    // Kiểm tra nếu là thiết bị di động thì phóng to bằng cách giảm hfov
+    if (window.innerWidth < 768) {
+      hfovMobile = 50;
+    }
+    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      hfovMobile = 50;
+    }
     const viewer = pannellum.viewer("panorama", {
       default: {
         firstScene: "main",
@@ -72,6 +80,7 @@
         main: {
           title: "Sân chính - Tây Đô Steel",
           panorama: "./assets/main.png",
+          hfov: hfovMobile,
           hotSpots: [{
             pitch: -6.419552350621027,
             yaw: -169.70078810534096,
@@ -91,6 +100,7 @@
         reception: {
           title: "Quầy lễ tân",
           panorama: "./assets/le-tan.png",
+          hfov: hfovMobile,
           hotSpots: [
             {
               pitch: -5.358857289127068,
@@ -104,6 +114,7 @@
         garden: {
           title: "Sân vườn - Tây Đô Steel",
           panorama: "./assets/san-vuon.png",
+          hfov: hfovMobile,
           hotSpots: [{
             pitch: -8.339623345269096,
             yaw: 135.59748586018884,
@@ -137,6 +148,7 @@
         server: {
           title: "Phòng server",
           panorama: "./assets/server.png",
+          hfov: hfovMobile,
           hotSpots: [{
             pitch: -5,
             yaw: 170,
@@ -148,6 +160,7 @@
         gazebo: {
           title: "Nhà mát",
           panorama: "./assets/nha-mat.png",
+          hfov: hfovMobile,
           hotSpots: [{
             pitch: -5,
             yaw: 170,
@@ -156,24 +169,10 @@
             sceneId: "hallFront",
           }],
         },
-        // warehouse: {
-        //   title: "Kho Phôi",
-        //   panorama: "../assets/kho-phoi.jpg",
-        //   hfov: 110,
-        //   minHfov: 80,
-        //   maxHfov: 120,
-        //   pitch: -5,
-        //   hotSpots: [{
-        //     pitch: -10,
-        //     yaw: 10,
-        //     type: "scene",
-        //     text: "Thăm sân vườn",
-        //     sceneId: "garden",
-        //   }],
-        // },
         hallFront: {
           title: "Sân hội trường",
           panorama: "./assets/san-hoi-truong.png",
+          hfov: hfovMobile,
           hotSpots: [{
             pitch: 3.57,
             yaw: 68.8,
@@ -193,6 +192,7 @@
         hall: {
           title: "Sân hội trường",
           panorama: "./assets/hoi-truong.png",
+          hfov: hfovMobile,
           hotSpots: [{
             pitch: 11.603775872124567,
             yaw: -76.93318446210628,
@@ -204,6 +204,7 @@
         bungalowBridge: {
           title: "Cầu Bungalow",
           panorama: "./assets/bungalow-bridge.png",
+          hfov: hfovMobile,
           hotSpots: [{
             pitch: -5.8758259029011795,
             yaw: -93.23270246717664,
@@ -219,13 +220,6 @@
     });
 
 
-    // Kiểm tra nếu là thiết bị di động thì phóng to bằng cách giảm hfov
-    if (window.innerWidth < 768) {
-      viewer.setHfov(60); // Giảm hfov để phóng to hình ảnh
-    }
-    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      viewer.setHfov(50); // Giảm hfov để phóng to hình ảnh
-    }
 
 
     // Make control buttons work
