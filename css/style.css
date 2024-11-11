@@ -36,3 +36,13 @@
   height: 100%;
   border: none;
 }
+
+/* Tùy chỉnh trên thiết bị di động */
+@media (max-width: 768px) {
+  .pnlm-info-box {
+    font-size: 1.8em;
+    /* Tăng kích thước văn bản cho di động */
+    padding: 25px;
+    /* Tăng khoảng cách trong */
+  }
+}
