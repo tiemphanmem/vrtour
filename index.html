@@ -83,6 +83,8 @@
           title: "Sân chính - Tây Đô Steel",
           panorama: "./assets/main.png",
           hfov: hfovMobile,
+          yaw: -169.70078810534096, // Góc nhìn mặc định ngang
+          pitch: -6.419552350621027, // Góc nhìn mặc định dọc
           hotSpots: [{
             pitch: -6.419552350621027,
             yaw: -169.70078810534096,
@@ -103,6 +105,12 @@
             type: "scene",
             text: "Văn phòng công ty",
             sceneId: "mainOffice",
+          }, {
+            pitch: -1.2496418451470301,
+            yaw: 16.192038504652373,
+            type: "scene",
+            text: "Phòng họp 5",
+            sceneId: "meetingRoom5",
           },
           {
             pitch: 24.63348397270918,  // điều chỉnh vị trí của hotspot
@@ -116,6 +124,34 @@
             }
           },
           ],
+        },
+        meetingRoom5: {
+          title: "Phòng họp 5",
+          panorama: "./assets/meeting-room5.png",
+          hfov: hfovMobile,
+          hotSpots: [
+            {
+              pitch: -1.2707158822091522,
+              yaw: -67.31520301346472,
+              type: "scene",
+              text: "Về sảnh chính",
+              sceneId: "main",
+            },
+          ]
+        },
+        meetingRoom3: {
+          title: "Phòng họp 3",
+          panorama: "./assets/meeting-room3.png",
+          hfov: hfovMobile,
+          hotSpots: [
+            {
+              pitch: -1.2707158822091522,
+              yaw: -67.31520301346472,
+              type: "scene",
+              text: "Về sân sau",
+              sceneId: "backYard",
+            },
+          ]
         },
         reception: {
           title: "Quầy lễ tân",
@@ -272,10 +308,11 @@
             sceneId: "koiPond",
           },
           {
-            pitch: 2.3937140570746522,
-            yaw: 32.91364881727429,
-            type: "infor",
+            pitch: -2.3596360948350696,
+            yaw: 43.48478953043616,
+            type: "sceen",
             text: "Phòng họp 3",
+            sceneId: "meetingRoom3",
           },
           {
             pitch: 3.0776807996961804,
