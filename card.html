@@ -236,18 +236,40 @@
     padding: 0;
     gap: 0px;
   }
+
+  .ant-image {
+    margin-right: 16px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .ant-image img {
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .ant-image.thumb {
+    width: 100%;
+    height: 390px;
+  }
+
+  .thumb .thumbnail {
+    height: 390px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
 </style>
 
 <body>
-  <div role="dialog" aria-modal="true" class="ant-modal css-szdez9 css-126h5b1" bis_skin_checked="1"
+  <div role="dialog" aria-modal="true" class="ant-modal css-szdez9 css-126h5b1"
     style="width: 520px; transform-origin: 323.226px 350.009px;" aria-labelledby=":r22:">
-    <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"
-      bis_skin_checked="1"></div>
-    <div tabindex="-1" style="outline: none;" bis_skin_checked="1">
-      <div class="ant-modal-content" bis_skin_checked="1">
+    <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
+    <div tabindex="-1" style="outline: none;">
+      <div class="ant-modal-content">
 
-        <div class="ant-modal-header" bis_skin_checked="1">
-          <div class="ant-modal-title" id=":r22:" bis_skin_checked="1">Thông tin chi tiết</div>
+        <div class="ant-modal-header">
+          <div class="ant-modal-title" id=":r22:">Thông tin chi tiết</div>
           <button type="button" aria-label="Close" class="ant-modal-close"><span class="ant-modal-close-x"><span
                 role="img" aria-label="close" class="anticon anticon-close ant-modal-close-icon"><svg
                   fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em"
@@ -257,39 +279,27 @@
                   </path>
                 </svg></span></span></button>
         </div>
-        <div class="ant-modal-body" bis_skin_checked="1">
-          <div bis_skin_checked="1">
-            <div class="css-48s7n1 ant-flex css-szdez9" bis_skin_checked="1">
-              <div style="flex: 1.4 1 0%;" bis_skin_checked="1">
-                <div class="ant-image css-szdez9" style="width: 100%; height: 390px;" bis_skin_checked="1"><img
-                    class="ant-image-img thumbnail css-szdez9"
-                    src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png" width="100%" height="390"
-                    style="height: 390px; border-radius: 12px; object-fit: cover;">
+        <div class="ant-modal-body">
+          <div>
+            <div class="css-48s7n1 ant-flex css-szdez9">
+              <div style="flex: 1.4 1 0%;">
+                <div class="ant-image css-szdez9 thumb"><img class="ant-image-img thumbnail css-szdez9"
+                    src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png" width="100%" height="390" style="">
 
                 </div>
-                <div class="ant-flex css-szdez9 ant-flex-justify-center more-images" style="margin-top: 20px;"
-                  bis_skin_checked="1">
-                  <div class="ant-image css-szdez9" style="width: 60px; height: 60px;" bis_skin_checked="1"><img
-                      class="ant-image-img css-szdez9" src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png"
-                      width="60" height="60" style="height: 60px; border-radius: 12px; object-fit: cover;">
-
+                <div class="ant-flex css-szdez9 ant-flex-justify-center more-images" style="margin-top: 20px;">
+                  <div class="ant-image css-szdez9"><img class="ant-image-img css-szdez9"
+                      src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png" width="60" height="60">
                   </div>
-                  <div style="margin: 0px 16px;" bis_skin_checked="1">
-                    <div class="ant-image css-szdez9" style="width: 60px; height: 60px;" bis_skin_checked="1"><img
-                        class="ant-image-img css-szdez9" src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png"
-                        width="60" height="60"
-                        style="height: 60px; border-radius: 12px; margin-right: 16px; object-fit: cover;">
-
-                    </div>
+                  <div class="ant-image css-szdez9"><img class="ant-image-img css-szdez9"
+                      src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png" width="60" height="60">
                   </div>
-                  <div class="ant-image css-szdez9" style="width: 60px; height: 60px;" bis_skin_checked="1"><img
-                      class="ant-image-img css-szdez9" src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png"
-                      width="60" height="60" style="height: 60px; border-radius: 12px; object-fit: cover;">
-
+                  <div class="ant-image css-szdez9"><img class="ant-image-img css-szdez9"
+                      src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png" width="60" height="60">
                   </div>
                 </div>
               </div>
-              <div class="content" style="flex: 1 1 0%;" bis_skin_checked="1">
+              <div class="content" style="flex: 1 1 0%;">
                 <article class="ant-typography title css-szdez9">Tháp Chiến Thắng</article>
                 <p>Bảo tàng là tháp
                   Chiến thắng cao 45 mét, tượng trưng cho dấu mốc năm 1945, Chủ tịch Hồ Chí Minh đọc bản tuyên ngôn độc
@@ -301,8 +311,7 @@
         </div>
       </div>
     </div>
-    <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"
-      bis_skin_checked="1"></div>
+    <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
   </div>
 </body>
 

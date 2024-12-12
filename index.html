@@ -99,11 +99,23 @@
             yaw: 11.40177671506035,
             // type: "scene",
             text: "Quầy lễ tân",
-            sceneId: "reception",
+            sceneId: "reception2",
             // cssClass: "custom-hotspot",
             createTooltipFunc: addArrow,
             createTooltipArgs: {
-              rotate: 90 // TOP
+              rotate: 90 // RIGHTTOP
+            }
+          },
+          {
+            pitch: -4.9572415241832,
+            yaw: -55.784361909281025,
+            // type: "scene",
+            text: "Sảnh chính",
+            sceneId: "yard2",
+            // cssClass: "custom-hotspot",
+            createTooltipFunc: addArrow,
+            createTooltipArgs: {
+              rotate: 140 // TOP
             }
           },
           {
@@ -150,6 +162,20 @@
             }
           },
           ],
+        },
+        yard2: {
+          title: "Sân chính",
+          panorama: "./assets/yard2.png",
+          hfov: hfovMobile,
+          hotSpots: [
+            {
+              pitch: -1.2707158822091522,
+              yaw: -67.31520301346472,
+              type: "scene",
+              text: "Về sảnh chính",
+              sceneId: "main",
+            },
+          ]
         },
         meetingRoom5: {
           title: "Phòng họp 5",
