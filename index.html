@@ -14,6 +14,7 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
   <link rel="stylesheet" src="./src/my-vr-tour.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/custom-animation.css">
   <script type="text/javascript" src="./src/my-vr-tour.js"></script>
   <script src="./js/main.js"></script>
   <style>
@@ -84,38 +85,62 @@
           panorama: "./assets/main.png",
           hfov: hfovMobile,
           autoRotate: 2, // Tốc độ tự chuyển động (độ/giây)
-          yaw: -169.70078810534096, // Góc nhìn mặc định ngang
-          pitch: -6.419552350621027, // Góc nhìn mặc định dọc
+          yaw: 8.902256636396828, // Góc nhìn mặc định ngang
+          pitch: -2.1455553262665323, // Góc nhìn mặc định dọc
           hotSpots: [{
-            pitch: -6.419552350621027,
-            yaw: -169.70078810534096,
+            pitch: -2.257414523054446,
+            yaw: 11.625695636604291,
             type: "scene",
             text: "Quầy lễ tân",
             sceneId: "reception",
           },
           {
-            pitch: -5.358857289127068,
-            yaw: 100.11053018621715,
+            pitch: -10.728607219712712,
+            yaw: 11.40177671506035,
+            // type: "scene",
+            text: "Quầy lễ tân",
+            sceneId: "reception",
+            // cssClass: "custom-hotspot",
+            createTooltipFunc: addArrow,
+            createTooltipArgs: {
+              rotate: 90 // TOP
+            }
+          },
+          {
+            pitch: 2.1831672453654011,
+            yaw: -111.42978189943972,
+            // type: "scene",
+            text: "Chuồng Sóc",
+            sceneId: "reception",
+            // cssClass: "custom-hotspot",
+            createTooltipFunc: addInfor,
+            createTooltipArgs: {
+              rotate: 90 // TOP
+            }
+          },
+          {
+            pitch: -2.77519912219726,
+            yaw: -63.6319342728666,
             type: "scene",
             text: "Thăm sân vườn",
             sceneId: "garden",
           },
           {
-            pitch: -0.6838989257812491,
-            yaw: 155.5281998047842,
+            pitch: 0.12261657547301857,
+            yaw: -46.61251434716837,
             type: "scene",
             text: "Văn phòng công ty",
             sceneId: "mainOffice",
           }, {
-            pitch: -1.2496418451470301,
-            yaw: 16.192038504652373,
+            pitch: 1.2392713450431874,
+            yaw: -175.33194207094175,
             type: "scene",
             text: "Phòng họp 5",
             sceneId: "meetingRoom5",
           },
           {
-            pitch: 24.63348397270918,  // điều chỉnh vị trí của hotspot
-            yaw: -166.33427442836072,   // điều chỉnh vị trí của hotspot
+            pitch: 33.806499654937824,
+            yaw: 12.052814686524016,
             type: "info",
             text: "Xem video giới thiệu",
             cssClass: "custom-hotspot",

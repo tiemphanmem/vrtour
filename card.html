@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: #393636;
+  }
+
+  .ant-modal {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    pointer-events: none;
+    top: 100px;
+    max-width: calc(100vw - 32px);
+    padding: 12px;
+    min-width: 840px;
+    margin: auto;
+    position: relative;
+    border: 4px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 520px;
+    transform-origin: 323.226px 350.009px;
+  }
+
+  .ant-modal-content {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 0;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    height: 550px;
+    overflow: scroll;
+    padding: 0px;
+    border-radius: 8px;
+  }
+
+  .ant-modal-close {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    list-style: none;
+    pointer-events: auto;
+    user-select: none;
+    touch-action: manipulation;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    box-sizing: border-box;
+    position: absolute;
+    top: 12px;
+    inset-inline-end: 12px;
+    z-index: 1010;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.45);
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    background: transparent;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+  }
+
+  .ant-modal-header {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    pointer-events: auto;
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.88);
+    background: #ffffff;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 8px;
+    padding: 0;
+    border-bottom: none;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    padding-bottom: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .ant-modal-title {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    pointer-events: auto;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-size: 20px;
+    color: rgb(37, 130, 110);
+    font-weight: 700;
+    text-align: center;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+  }
+
+  .ant-modal-body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.88);
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    pointer-events: auto;
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    word-wrap: break-word;
+    padding: 0;
+  }
+
+  .ant-flex {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.88);
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    pointer-events: auto;
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+    display: flex;
+    gap: 20px;
+    border-radius: 16px;
+    padding: 0px 20px;
+  }
+
+  .ant-modal-body .content {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.88);
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    pointer-events: auto;
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    max-height: 480px;
+    overflow-y: scroll;
+    flex: 1 1 0%;
+  }
+
+  .ant-modal-body .content .title {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    list-style: none;
+    pointer-events: auto;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    word-break: break-word;
+    color: var(--Dark-2, #1e1e1e);
+    font-family: Roboto;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .ant-modal-body .content .textContent {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    list-style: none;
+    pointer-events: auto;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    word-break: break-word;
+    color: var(--Dark-2, #1e1e1e);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    white-space: pre-line;
+  }
+
+  .more-images {
+    padding: 0;
+    gap: 0px;
+  }
+</style>
+
+<body>
+  <div role="dialog" aria-modal="true" class="ant-modal css-szdez9 css-126h5b1" bis_skin_checked="1"
+    style="width: 520px; transform-origin: 323.226px 350.009px;" aria-labelledby=":r22:">
+    <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"
+      bis_skin_checked="1"></div>
+    <div tabindex="-1" style="outline: none;" bis_skin_checked="1">
+      <div class="ant-modal-content" bis_skin_checked="1">
+
+        <div class="ant-modal-header" bis_skin_checked="1">
+          <div class="ant-modal-title" id=":r22:" bis_skin_checked="1">Thông tin chi tiết</div>
+          <button type="button" aria-label="Close" class="ant-modal-close"><span class="ant-modal-close-x"><span
+                role="img" aria-label="close" class="anticon anticon-close ant-modal-close-icon"><svg
+                  fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em"
+                  height="1em" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z">
+                  </path>
+                </svg></span></span></button>
+        </div>
+        <div class="ant-modal-body" bis_skin_checked="1">
+          <div bis_skin_checked="1">
+            <div class="css-48s7n1 ant-flex css-szdez9" bis_skin_checked="1">
+              <div style="flex: 1.4 1 0%;" bis_skin_checked="1">
+                <div class="ant-image css-szdez9" style="width: 100%; height: 390px;" bis_skin_checked="1"><img
+                    class="ant-image-img thumbnail css-szdez9"
+                    src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png" width="100%" height="390"
+                    style="height: 390px; border-radius: 12px; object-fit: cover;">
+
+                </div>
+                <div class="ant-flex css-szdez9 ant-flex-justify-center more-images" style="margin-top: 20px;"
+                  bis_skin_checked="1">
+                  <div class="ant-image css-szdez9" style="width: 60px; height: 60px;" bis_skin_checked="1"><img
+                      class="ant-image-img css-szdez9" src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png"
+                      width="60" height="60" style="height: 60px; border-radius: 12px; object-fit: cover;">
+
+                  </div>
+                  <div style="margin: 0px 16px;" bis_skin_checked="1">
+                    <div class="ant-image css-szdez9" style="width: 60px; height: 60px;" bis_skin_checked="1"><img
+                        class="ant-image-img css-szdez9" src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png"
+                        width="60" height="60"
+                        style="height: 60px; border-radius: 12px; margin-right: 16px; object-fit: cover;">
+
+                    </div>
+                  </div>
+                  <div class="ant-image css-szdez9" style="width: 60px; height: 60px;" bis_skin_checked="1"><img
+                      class="ant-image-img css-szdez9" src="https://s3.yootek.com.vn/yootek/1730903557796-9829.png"
+                      width="60" height="60" style="height: 60px; border-radius: 12px; object-fit: cover;">
+
+                  </div>
+                </div>
+              </div>
+              <div class="content" style="flex: 1 1 0%;" bis_skin_checked="1">
+                <article class="ant-typography title css-szdez9">Tháp Chiến Thắng</article>
+                <p>Bảo tàng là tháp
+                  Chiến thắng cao 45 mét, tượng trưng cho dấu mốc năm 1945, Chủ tịch Hồ Chí Minh đọc bản tuyên ngôn độc
+                  lập khai sinh ra nước Việt Nam Dân chủ Cộng hòa. Phần trên cùng của ngọn tháp cắt vát 60 độ, tạo hình
+                  ngôi sao 5 cánh trên đỉnh.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"
+      bis_skin_checked="1"></div>
+  </div>
+</body>
+
+</html>
