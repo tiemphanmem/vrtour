@@ -9,15 +9,8 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   pointer-events: none;
   top: 100px;
-  max-width: calc(100vw - 32px);
-  padding: 12px;
-  min-width: 840px;
-  margin: auto;
-  position: relative;
-  border: 4px solid white;
   border-radius: 20px;
   box-sizing: border-box;
-  width: 520px;
   transform-origin: 323.226px 350.009px;
 }
 
@@ -245,4 +238,55 @@
   height: 390px;
   border-radius: 12px;
   object-fit: cover;
+}
+
+
+/* Responsive Design for PC */
+@media (min-width: 1024px) {
+  .popup {
+    width: 250px;
+    /* Larger popup width for bigger screens */
+  }
+
+  .ant-modal {
+    padding: 12px;
+    min-width: 840px;
+    margin: auto;
+    position: relative;
+    border: 4px solid white;
+    width: 520px;
+    max-width: calc(100vw - 32px);
+  }
+}
+
+/* CSS cho các thiết bị có chiều rộng tối đa là 768px (thiết bị di động) */
+@media (max-width: 768px) {
+  .ant-modal-content {
+    bottom: 0 !important;
+    position: absolute !important;
+    width: 100% !important;
+    min-height: 200px !important;
+    height: 1500px !important;
+  }
+
+  .ant-modal {
+    padding: 0 !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    position: absolute !important;
+    border: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .ant-modal-content {
+    bottom: 0 !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 60% !important;
+  }
+
+  .ant-flex {
+    display: block !important;
+  }
 }
