@@ -145,87 +145,114 @@
           autoRotate: 2, // Tốc độ tự chuyển động (độ/giây)
           yaw: 8.902256636396828, // Góc nhìn mặc định ngang
           pitch: -2.1455553262665323, // Góc nhìn mặc định dọc
-          hotSpots: [{
-            pitch: -2.257414523054446,
-            yaw: 11.625695636604291,
-            type: "scene",
-            text: "Quầy lễ tân",
-            sceneId: "reception",
-          },
-          {
-            pitch: -10.728607219712712,
-            yaw: 11.40177671506035,
-            // type: "scene",
-            text: "Quầy lễ tân",
-            sceneId: "reception2",
-            // cssClass: "custom-hotspot",
-            createTooltipFunc: addArrow,
-            createTooltipArgs: {
-              rotate: 90 // RIGHTTOP
-            }
-          },
-          {
-            pitch: -4.9572415241832,
-            yaw: -55.784361909281025,
-            // type: "scene",
-            text: "Sảnh chính",
-            sceneId: "yard2",
-            // cssClass: "custom-hotspot",
-            createTooltipFunc: addArrow,
-            createTooltipArgs: {
-              rotate: 140 // TOP
-            }
-          },
-          {
-            pitch: 2.1831672453654011,
-            yaw: -111.42978189943972,
-            // type: "scene",
-            text: "Chuồng Sóc",
-            // sceneId: "reception",
-            // cssClass: "custom-hotspot",
-            createTooltipFunc: addInfor,
-            createTooltipArgs: {
-              title: "Chuồng Sóc",
-              description: "សូមព្យាយាមប្រើបទពិសោធន៍អក្សរនេះ។ ប្រាកដជាពាក្យនិងឃ្លាច្រើនត្រូវបានបន្ថែមដើម្បីឱ្យមានការលេខាភាព។ នេះគ្រាន់តែជាអត្ថបទសាកល្បងដែលប្រើប្រាស់សម្រាប់គំរូ។ អត្ថបទនេះត្រូវបានបន្ថែមនៅលើគេហទំព័រដើម្បីបង្ហាញរបៀបនៃការប្លង់។ អត្ថបទនេះមិនមានអត្ថន័យពិតជាអ្វីទេ តែគ្រាន់តែជាដើរផ្នែកខាងក្រៅ។! សូមព្យាយាមប្រើបទពិសោធន៍អក្សរនេះ។ ប្រាកដជាពាក្យនិងឃ្លាច្រើនត្រូវបានបន្ថែមដើម្បីឱ្យមានការលេខាភាព។ នេះគ្រាន់តែជាអត្ថបទសាកល្បងដែលប្រើប្រាស់សម្រាប់",
-              images: [
-                "https://mamnonhoami.edu.vn/wp-content/uploads/2021/07/soc-nhat-hat-de.jpg",
-                "https://th.bing.com/th/id/R.80bf4290475f8f2d1f47a3d94ec35dc2?rik=FhI0TyLCxuMLig&riu=http%3a%2f%2fvpet.vn%2fstorage%2fphotos%2f3%2fSoc-duoi-do%2fsoc-duoi-do-Vpet.vn1.png&ehk=Kcqd1bixcjbSX4NugTNfC2WtFWfKjWv%2bVAfPEGhw%2fN4%3d&risl=&pid=ImgRaw&r=0",
-                "https://th.bing.com/th/id/OIP.Y1XKgHqId1v5gTqG_rCsngAAAA?w=460&h=460&rs=1&pid=ImgDetMain"
-              ],
-              rotate: 90 // TOP
-            }
-          },
-          {
-            pitch: -2.77519912219726,
-            yaw: -63.6319342728666,
-            type: "scene",
-            text: "Thăm sân vườn",
-            sceneId: "garden",
-          },
-          {
-            pitch: 0.12261657547301857,
-            yaw: -46.61251434716837,
-            type: "scene",
-            text: "Văn phòng công ty",
-            sceneId: "mainOffice",
-          }, {
-            pitch: 1.2392713450431874,
-            yaw: -175.33194207094175,
-            type: "scene",
-            text: "Phòng họp 5",
-            sceneId: "meetingRoom5",
-          },
-          {
-            pitch: 33.806499654937824,
-            yaw: 12.052814686524016,
-            type: "info",
-            text: "Xem video giới thiệu",
-            cssClass: "custom-hotspot",
-            createTooltipFunc: addVideoTooltip,
-            createTooltipArgs: {
-              videoId: "dGjruFfjfO91XV-c" // Thay bằng ID video YouTube của bạn
-            }
-          },
+          hotSpots: [
+            //   {
+            //   pitch: -2.257414523054446,
+            //   yaw: 11.625695636604291,
+            //   type: "scene",
+            //   text: "Quầy lễ tân",
+            //   sceneId: "reception",
+            // },
+            {
+              pitch: -2,
+              yaw: 15.733099542713262,
+              // type: "scene",
+              text: "Quầy lễ tân",
+              // sceneId: "reception",
+              // cssClass: "custom-hotspot",
+              createTooltipFunc: addInfor,
+              createTooltipArgs: {
+                title: "Quầy lễ tân",
+                description: "Quầy lễ tân là nơi tiếp đón khách hàng và đối tác, được thiết kế thân thiện và chuyên nghiệp. Nhân viên lễ tân tại đây chịu trách nhiệm hướng dẫn, hỗ trợ thông tin và xử lý các yêu cầu của khách, góp phần tạo ấn tượng tốt đẹp ban đầu cho công ty.",
+                images: [
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3362.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3353.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3355.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3356.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3363.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3364.JPG",
+                ],
+                rotate: 90 // TOP
+              }
+            },
+            {
+              pitch: -10.728607219712712,
+              yaw: 11.40177671506035,
+              // type: "scene",
+              text: "Quầy lễ tân",
+              sceneId: "reception2",
+              // cssClass: "custom-hotspot",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 90 // RIGHTTOP
+              }
+            },
+            {
+              pitch: -4.9572415241832,
+              yaw: -55.784361909281025,
+              // type: "scene",
+              text: "Sảnh chính",
+              sceneId: "yard2",
+              // cssClass: "custom-hotspot",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 140 // TOP
+              }
+            }, {
+              pitch: -24.883078556772606,
+              yaw: -172.31198573066308,
+              // type: "scene",
+              text: "Phòng họp 5",
+              sceneId: "meetingRoom5",
+              // cssClass: "custom-hotspot",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 90 // TOP
+              }
+            },
+            {
+              pitch: -1.3784555225352986,
+              yaw: 141.04669656465353,
+              // type: "scene",
+              text: "Phòng an ninh",
+              // sceneId: "reception",
+              // cssClass: "custom-hotspot",
+              createTooltipFunc: addInfor,
+              createTooltipArgs: {
+                title: "Phòng an ninh",
+                description: "Phòng an ninh được trang bị hệ thống giám sát hiện đại, bao gồm camera quan sát, nhằm đảm bảo an ninh và an toàn cho toàn bộ khu vực. Nhân viên bảo vệ tại đây theo dõi trực tiếp hình ảnh từ camera, xử lý kịp thời các sự cố và duy trì môi trường an toàn cho các hoạt động nội bộ.",
+                images: [
+                  "./assets/details/security-room/2024_12_13_09_46_IMG_3366.JPG",
+                  "./assets/details/security-room/2024_12_13_09_47_IMG_3369.JPG"
+                ],
+                rotate: 90 // TOP
+              }
+            },
+            {
+              pitch: -2.77519912219726,
+              yaw: -63.6319342728666,
+              type: "scene",
+              text: "Thăm sân vườn",
+              sceneId: "garden",
+            },
+            {
+              pitch: 0.12261657547301857,
+              yaw: -46.61251434716837,
+              type: "scene",
+              text: "Văn phòng công ty",
+              sceneId: "mainOffice",
+            },
+            {
+              pitch: 33.806499654937824,
+              yaw: 12.052814686524016,
+              type: "info",
+              text: "Xem video giới thiệu",
+              cssClass: "custom-hotspot",
+              createTooltipFunc: addVideoTooltip,
+              createTooltipArgs: {
+                videoId: "dGjruFfjfO91XV-c" // Thay bằng ID video YouTube của bạn
+              }
+            },
           ],
         },
         yard2: {
