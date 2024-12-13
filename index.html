@@ -261,12 +261,45 @@
           hfov: hfovMobile,
           hotSpots: [
             {
-              pitch: -1.2707158822091522,
-              yaw: -67.31520301346472,
-              type: "scene",
-              text: "Về sảnh chính",
-              sceneId: "main",
+              pitch: -14,
+              yaw: -104.86673013859252,
+              text: "Khu văn phòng",
+              sceneId: "mainOffice",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 150 // TOP
+              }
+            }, {
+              pitch: -16,
+              yaw: -118,
+              text: "yard3",
+              sceneId: "yard3",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 40 // TOP
+              }
             },
+
+            {
+              pitch: -16.77746073404948,
+              yaw: 40.947418212890625,
+              text: "Sảnh chính",
+              sceneId: "main",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 90 // TOP
+              }
+            }, {
+              pitch: -20.47371334499783,
+              yaw: 6.1199220274857,
+              text: "Quầy lễ tân",
+              sceneId: "reception",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 30 // TOP
+              }
+            },
+
           ]
         },
         meetingRoom5: {
