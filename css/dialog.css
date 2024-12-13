@@ -285,7 +285,7 @@
     bottom: 0 !important;
     position: absolute !important;
     width: 100% !important;
-    height: 60% !important;
+    height: 95% !important;
   }
 
   .ant-flex {
@@ -294,10 +294,25 @@
 
   .more-images {
     display: flex;
+    margin-bottom: 20px;
   }
 
   .ant-modal-title {
     font-size: 20px;
     font-weight: 700;
+  }
+
+  .ant-modal-body .thumb {
+    height: 300px;
+  }
+
+  .ant-modal-body .thumb img {
+    height: 300px;
+  }
+
+  .ant-modal-body .content p {
+    overflow-y: scroll;
+    height: 220px;
+    padding-bottom: 15px;
   }
 }
