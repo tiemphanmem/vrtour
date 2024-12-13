@@ -146,20 +146,11 @@
           yaw: 8.902256636396828, // Góc nhìn mặc định ngang
           pitch: -2.1455553262665323, // Góc nhìn mặc định dọc
           hotSpots: [
-            //   {
-            //   pitch: -2.257414523054446,
-            //   yaw: 11.625695636604291,
-            //   type: "scene",
-            //   text: "Quầy lễ tân",
-            //   sceneId: "reception",
-            // },
             {
               pitch: -2,
               yaw: 15.733099542713262,
               // type: "scene",
               text: "Quầy lễ tân",
-              // sceneId: "reception",
-              // cssClass: "custom-hotspot",
               createTooltipFunc: addInfor,
               createTooltipArgs: {
                 title: "Quầy lễ tân",
@@ -178,10 +169,8 @@
             {
               pitch: -10.728607219712712,
               yaw: 11.40177671506035,
-              // type: "scene",
               text: "Quầy lễ tân",
-              sceneId: "reception2",
-              // cssClass: "custom-hotspot",
+              sceneId: "reception",
               createTooltipFunc: addArrow,
               createTooltipArgs: {
                 rotate: 90 // RIGHTTOP
@@ -190,10 +179,8 @@
             {
               pitch: -4.9572415241832,
               yaw: -55.784361909281025,
-              // type: "scene",
               text: "Sảnh chính",
               sceneId: "yard2",
-              // cssClass: "custom-hotspot",
               createTooltipFunc: addArrow,
               createTooltipArgs: {
                 rotate: 140 // TOP
@@ -201,10 +188,8 @@
             }, {
               pitch: -24.883078556772606,
               yaw: -172.31198573066308,
-              // type: "scene",
               text: "Phòng họp 5",
               sceneId: "meetingRoom5",
-              // cssClass: "custom-hotspot",
               createTooltipFunc: addArrow,
               createTooltipArgs: {
                 rotate: 90 // TOP
@@ -213,10 +198,7 @@
             {
               pitch: -1.3784555225352986,
               yaw: 141.04669656465353,
-              // type: "scene",
               text: "Phòng an ninh",
-              // sceneId: "reception",
-              // cssClass: "custom-hotspot",
               createTooltipFunc: addInfor,
               createTooltipArgs: {
                 title: "Phòng an ninh",
@@ -228,31 +210,6 @@
                 rotate: 90 // TOP
               }
             },
-            {
-              pitch: -2.77519912219726,
-              yaw: -63.6319342728666,
-              type: "scene",
-              text: "Thăm sân vườn",
-              sceneId: "garden",
-            },
-            {
-              pitch: 0.12261657547301857,
-              yaw: -46.61251434716837,
-              type: "scene",
-              text: "Văn phòng công ty",
-              sceneId: "mainOffice",
-            },
-            // {
-            //   pitch: 33.806499654937824,
-            //   yaw: 12.052814686524016,
-            //   type: "info",
-            //   text: "Xem video giới thiệu",
-            //   cssClass: "custom-hotspot",
-            //   createTooltipFunc: addVideoTooltip,
-            //   createTooltipArgs: {
-            //     videoId: "dGjruFfjfO91XV-c" // Thay bằng ID video YouTube của bạn
-            //   }
-            // },
           ],
         },
         yard2: {
@@ -367,34 +324,36 @@
         },
         reception: {
           title: "Quầy lễ tân",
-          panorama: "./assets/le-tan.png",
+          panorama: "./assets/reception.png",
           hfov: hfovMobile,
           hotSpots: [
             {
-              pitch: -5.358857289127068,
-              yaw: 100.11053018621715,
-              type: "scene",
-              text: "Thăm sân vườn",
-              sceneId: "garden",
-            },
-            {
-              pitch: -6.859914991590712,
-              yaw: -112.99872360019287,
-              type: "scene",
-              text: "Văn phòng công ty",
-              sceneId: "mainOffice",
-            },
-            {
-              pitch: 4.355567077967637,
-              yaw: -100.56630452473962,
-              type: "info",
-              text: "Phòng Tổng Giám đốc",
-            },
-            {
-              pitch: 2.9835815365179847,
-              yaw: -66.12956576877173,
-              type: "info",
-              text: "Phòng Trợ lý Tổng Giám đốc",
+              pitch: -23,
+              yaw: 6,
+              sceneId: "main",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 90
+              }
+            }, {
+              pitch: -20,
+              yaw: -34,
+              // type: "scene",
+              text: "Quầy lễ tân",
+              createTooltipFunc: addInfor,
+              createTooltipArgs: {
+                title: "Quầy lễ tân",
+                description: "Quầy lễ tân là nơi tiếp đón khách hàng và đối tác, được thiết kế thân thiện và chuyên nghiệp. Nhân viên lễ tân tại đây chịu trách nhiệm hướng dẫn, hỗ trợ thông tin và xử lý các yêu cầu của khách, góp phần tạo ấn tượng tốt đẹp ban đầu cho công ty.",
+                images: [
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3362.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3353.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3355.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3356.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3363.JPG",
+                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3364.JPG",
+                ],
+                rotate: 90 // TOP
+              }
             },
           ],
         },
