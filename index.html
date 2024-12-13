@@ -302,6 +302,41 @@
 
           ]
         },
+        yard3: {
+          title: "Hồ cá Hải Tượng",
+          panorama: "./assets/yard3.png",
+          hfov: hfovMobile,
+          hotSpots: [
+            {
+              pitch: -10,
+              yaw: 30,
+              text: "Hồ cá Hải Tượng",
+              createTooltipFunc: addInfor,
+              createTooltipArgs: {
+                title: "Hồ cá Hải Tượng",
+                description: "Hồ cá trong khuôn viên công ty, nằm gần khu vực nhà mát, được thiết kế như một điểm nhấn xanh mát và thư giãn cho không gian làm việc. Hồ được trang trí với cây thủy sinh và đá tự nhiên, mang đến vẻ đẹp hài hòa và gần gũi với thiên nhiên. Đây là nơi nuôi thả các loài cá cảnh đẹp mắt, tạo cảm giác thư thái và thoải mái cho nhân viên cũng như khách tham quan. Vị trí gần nhà mát giúp kết nối không gian nghỉ ngơi, làm cho khu vực trở thành một điểm lý tưởng để thư giãn sau giờ làm việc hoặc tổ chức các hoạt động ngoài trời. Hồ cá không chỉ mang giá trị thẩm mỹ mà còn góp phần tạo nên một môi trường làm việc trong lành và sáng tạo.",
+                images: [
+                  "./assets/details/front-aquarium/2024_12_13_13_56_IMG_3401.JPG",
+                  "./assets/details/front-aquarium/2024_12_13_13_56_IMG_3402.JPG",
+                  "./assets/details/front-aquarium/2024_12_13_13_56_IMG_3404.JPG",
+                  "./assets/details/front-aquarium/2024_12_13_13_57_IMG_3406.JPG",
+                  "./assets/details/front-aquarium/2024_12_13_13_57_IMG_3407.JPG",
+                  "./assets/details/front-aquarium/2024_12_13_13_57_IMG_3408.JPG",
+                ],
+                rotate: 90 // TOP
+              }
+            }, {
+              pitch: -4,
+              yaw: 157,
+              text: "Quầy lễ tân",
+              sceneId: "backYard",
+              createTooltipFunc: addArrow,
+              createTooltipArgs: {
+                rotate: 150
+              }
+            },
+          ]
+        },
         meetingRoom5: {
           title: "Phòng họp 5",
           panorama: "./assets/meeting-room5.png",
