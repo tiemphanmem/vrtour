@@ -145,71 +145,92 @@
           autoRotate: 2, // Tốc độ tự chuyển động (độ/giây)
           yaw: 8.902256636396828, // Góc nhìn mặc định ngang
           pitch: -2.1455553262665323, // Góc nhìn mặc định dọc
-          hotSpots: [
-            {
-              pitch: -2,
-              yaw: 15.733099542713262,
-              // type: "scene",
-              text: "Quầy lễ tân",
-              createTooltipFunc: addInfor,
-              createTooltipArgs: {
-                title: "Quầy lễ tân",
-                description: "Quầy lễ tân là nơi tiếp đón khách hàng và đối tác, được thiết kế thân thiện và chuyên nghiệp. Nhân viên lễ tân tại đây chịu trách nhiệm hướng dẫn, hỗ trợ thông tin và xử lý các yêu cầu của khách, góp phần tạo ấn tượng tốt đẹp ban đầu cho công ty.",
-                images: [
-                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3362.JPG",
-                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3353.JPG",
-                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3355.JPG",
-                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3356.JPG",
-                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3363.JPG",
-                  "./assets/details/reception-desk/2024_12_13_09_45_IMG_3364.JPG",
-                ],
-                rotate: 90 // TOP
-              }
-            },
-            {
-              pitch: -10.728607219712712,
-              yaw: 11.40177671506035,
-              text: "Quầy lễ tân",
-              sceneId: "reception",
-              createTooltipFunc: addArrow,
-              createTooltipArgs: {
-                rotate: 90 // RIGHTTOP
-              }
-            },
-            {
-              pitch: -4.9572415241832,
-              yaw: -55.784361909281025,
-              text: "Sảnh chính",
-              sceneId: "yard2",
-              createTooltipFunc: addArrow,
-              createTooltipArgs: {
-                rotate: 140 // TOP
-              }
-            }, {
-              pitch: -24.883078556772606,
-              yaw: -172.31198573066308,
-              text: "Phòng họp 5",
-              sceneId: "meetingRoom5",
-              createTooltipFunc: addArrow,
-              createTooltipArgs: {
-                rotate: 90 // TOP
-              }
-            },
-            {
-              pitch: -1.3784555225352986,
-              yaw: 141.04669656465353,
-              text: "Phòng an ninh",
-              createTooltipFunc: addInfor,
-              createTooltipArgs: {
-                title: "Phòng an ninh",
-                description: "Phòng an ninh được trang bị hệ thống giám sát hiện đại, bao gồm camera quan sát, nhằm đảm bảo an ninh và an toàn cho toàn bộ khu vực. Nhân viên bảo vệ tại đây theo dõi trực tiếp hình ảnh từ camera, xử lý kịp thời các sự cố và duy trì môi trường an toàn cho các hoạt động nội bộ.",
-                images: [
-                  "./assets/details/security-room/2024_12_13_09_46_IMG_3366.JPG",
-                  "./assets/details/security-room/2024_12_13_09_47_IMG_3369.JPG"
-                ],
-                rotate: 90 // TOP
-              }
-            },
+          hotSpots: [{
+            pitch: 0.8,
+            yaw: -104,
+            // type: "scene",
+            text: "Chuồng Sóc",
+            createTooltipFunc: addInfor,
+            createTooltipArgs: {
+              title: "Chuồng Sóc",
+              description: "Chuồng sóc là nơi cư trú và hoạt động của loài sóc, được thiết kế thân thiện với thiên nhiên và đảm bảo sự thoải mái cho loài vật này. Chuồng được làm từ chất liệu tự nhiên như gỗ hoặc tre, kết hợp với các vật liệu bền vững, tạo môi trường gần gũi như trong rừng. Bên trong, chuồng sóc được bố trí nhiều khu vực khác nhau như nơi nghỉ ngơi, khu vực leo trèo, và chỗ để thức ăn, đảm bảo sóc có không gian vận động và sinh hoạt thoải mái. Khu vực này thường được đặt ở nơi yên tĩnh, thoáng mát, góp phần tạo môi trường sống lý tưởng cho loài sóc. Người chăm sóc sóc tại chuồng sẽ chịu trách nhiệm quan sát, cung cấp thức ăn, và đảm bảo vệ sinh chuồng, mang lại cảm giác an toàn và thoải mái, tạo điều kiện cho sóc phát triển tự nhiên.",
+              images: [
+                "./assets/details/squirrel-cage/2024_12_19_12_14_IMG_3616.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_14_IMG_3617.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_14_IMG_3618.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_15_IMG_3619.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_15_IMG_3621.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_15_IMG_3622.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_15_IMG_3625.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_15_IMG_3626.JPG",
+                "./assets/details/squirrel-cage/2024_12_19_12_15_IMG_3627.JPG",
+              ]
+            }
+          },
+          {
+            pitch: -2,
+            yaw: 15.733099542713262,
+            // type: "scene",
+            text: "Quầy lễ tân",
+            createTooltipFunc: addInfor,
+            createTooltipArgs: {
+              title: "Quầy lễ tân",
+              description: "Quầy lễ tân là nơi tiếp đón khách hàng và đối tác, được thiết kế thân thiện và chuyên nghiệp. Nhân viên lễ tân tại đây chịu trách nhiệm hướng dẫn, hỗ trợ thông tin và xử lý các yêu cầu của khách, góp phần tạo ấn tượng tốt đẹp ban đầu cho công ty.",
+              images: [
+                "./assets/details/reception-desk/2024_12_13_09_45_IMG_3362.JPG",
+                "./assets/details/reception-desk/2024_12_13_09_45_IMG_3353.JPG",
+                "./assets/details/reception-desk/2024_12_13_09_45_IMG_3355.JPG",
+                "./assets/details/reception-desk/2024_12_13_09_45_IMG_3356.JPG",
+                "./assets/details/reception-desk/2024_12_13_09_45_IMG_3363.JPG",
+                "./assets/details/reception-desk/2024_12_13_09_45_IMG_3364.JPG",
+              ],
+              rotate: 90 // TOP
+            }
+          },
+          {
+            pitch: -10.728607219712712,
+            yaw: 11.40177671506035,
+            text: "Quầy lễ tân",
+            sceneId: "reception",
+            createTooltipFunc: addArrow,
+            createTooltipArgs: {
+              rotate: 90 // RIGHTTOP
+            }
+          },
+          {
+            pitch: -4.9572415241832,
+            yaw: -55.784361909281025,
+            text: "Sảnh chính",
+            sceneId: "yard2",
+            createTooltipFunc: addArrow,
+            createTooltipArgs: {
+              rotate: 140 // TOP
+            }
+          }, {
+            pitch: -24.883078556772606,
+            yaw: -172.31198573066308,
+            text: "Phòng họp 5",
+            sceneId: "meetingRoom5",
+            createTooltipFunc: addArrow,
+            createTooltipArgs: {
+              rotate: 90 // TOP
+            }
+          },
+          {
+            pitch: -1.3784555225352986,
+            yaw: 141.04669656465353,
+            text: "Phòng an ninh",
+            createTooltipFunc: addInfor,
+            createTooltipArgs: {
+              title: "Phòng an ninh",
+              description: "Phòng an ninh được trang bị hệ thống giám sát hiện đại, bao gồm camera quan sát, nhằm đảm bảo an ninh và an toàn cho toàn bộ khu vực. Nhân viên bảo vệ tại đây theo dõi trực tiếp hình ảnh từ camera, xử lý kịp thời các sự cố và duy trì môi trường an toàn cho các hoạt động nội bộ.",
+              images: [
+                "./assets/details/security-room/2024_12_13_09_46_IMG_3366.JPG",
+                "./assets/details/security-room/2024_12_13_09_47_IMG_3369.JPG"
+              ],
+              rotate: 90 // TOP
+            }
+          },
           ],
         },
         yard2: {
@@ -351,6 +372,27 @@
                   "./assets/details/reception-desk/2024_12_13_09_45_IMG_3356.JPG",
                   "./assets/details/reception-desk/2024_12_13_09_45_IMG_3363.JPG",
                   "./assets/details/reception-desk/2024_12_13_09_45_IMG_3364.JPG",
+                ],
+                rotate: 90 // TOP
+              }
+            },
+
+            {
+              pitch: -4,
+              yaw: -174,
+              // type: "scene",
+              text: "Phòng Tổng Giám đốc",
+              createTooltipFunc: addInfor,
+              createTooltipArgs: {
+                title: "Phòng Tổng Giám đốc",
+                description: "Phòng Tổng Giám Đốc là không gian làm việc của lãnh đạo cao nhất công ty, được thiết kế với phong cách sang trọng, hiện đại và chuyên nghiệp. Đây không chỉ là nơi điều hành các hoạt động chiến lược mà còn là địa điểm để tổ chức các cuộc họp quan trọng, tiếp đón đối tác, và đưa ra các quyết định mang tính định hướng cho sự phát triển của công ty. Không gian phòng được bố trí tinh tế, với nội thất cao cấp và tiện nghi tối ưu, tạo cảm giác trang trọng và thoải mái. Đồng thời, môi trường làm việc tại đây được xây dựng nhằm hỗ trợ tối đa cho việc ra quyết định, quản lý và giao tiếp hiệu quả với các bên liên quan. Phòng Tổng Giám Đốc không chỉ thể hiện vai trò lãnh đạo mà còn là biểu tượng cho tầm nhìn, giá trị cốt lõi và định hướng phát triển bền vững của công ty.",
+                images: [
+                  "./assets/details/ceo-ffice/2024_12_14_10_25_IMG_3444.JPG",
+                  "./assets/details/ceo-ffice/2024_12_14_10_25_IMG_3445.JPG",
+                  "./assets/details/ceo-ffice/2024_12_14_10_25_IMG_3447.JPG",
+                  "./assets/details/ceo-ffice/2024_12_14_10_25_IMG_3448.JPG",
+                  "./assets/details/ceo-ffice/2024_12_14_10_26_IMG_3449.JPG",
+                  "./assets/details/ceo-ffice/2024_12_14_10_26_IMG_3450.JPG",
                 ],
                 rotate: 90 // TOP
               }
